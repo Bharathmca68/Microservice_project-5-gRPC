@@ -1,0 +1,5 @@
+/main-server/node_modules
+/main-server/dist
+
+/http-server/node_modules
+/http-server/dist
