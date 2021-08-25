@@ -19,14 +19,14 @@ export class AppController {
   // @MessagePattern('add')                     <--  Change this
   @GrpcMethod('AppController', 'Accumulate') // <--  to this
   //
-  // async accumulate(data: number[])  {              <--  Change method param type
+  // async accumulate(data: number[])  {              <--  Change method param type 
   //   this.logger.log('Adding ' + data.toString());  <--  and return type to match
   //   return this.appService.accumulate(data);      <--  .proto file
   // }                                                <--
   accumulate(numberArray: INumberArray, metadata: any): ISumOfNumberArray { // <--
-    this.logger.log('Adding ' + numberArray.data.toString()); //               <--  Should look
+    this.logger.log('Adding ' + numberArray.data.toString()); //              <--  Should look
     return { sum: this.appService.accumulate(numberArray.data) }; //          <--  like this
-  } //      
+  }                                                           //      
 
 
 }
